@@ -56,7 +56,7 @@ sudo mkdir /etc/ssl/private
 
 sudo chmod 700 /etc/ssl/private
 
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/ACS.key -out /etc/ssl/certs/ACS.crt
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/ovie.key -out /etc/ssl/certs/ovie.crt
 
 sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 ```
@@ -100,7 +100,7 @@ yum install -y  ./build/amazon-efs-utils*rpm
 ```
 yum install -y mod_ssl
 
-openssl req -newkey rsa:2048 -nodes -keyout /etc/pki/tls/private/ACS.key -x509 -days 365 -out /etc/pki/tls/certs/ACS.crt
+openssl req -newkey rsa:2048 -nodes -keyout /etc/pki/tls/private/ovie.key -x509 -days 365 -out /etc/pki/tls/certs/ovie.crt
 
 vi /etc/httpd/conf.d/ssl.conf
 ```

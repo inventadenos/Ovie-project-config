@@ -29,14 +29,14 @@ systemctl start chronyd
 
 systemctl enable chronyd
 ```
-## configure selinux policies for the webservers and nginx servers
+## configure some linux policies for the webservers and nginx servers
 ```
 setsebool -P httpd_can_network_connect=1
 setsebool -P httpd_can_network_connect_db=1
 setsebool -P httpd_execmem=1
 setsebool -P httpd_use_nfs 1
 ```
-## this section will instll amazon efs utils for mounting the target on the Elastic file system
+## this section will install amazon efs utils for mounting the target on the Elastic file system
 ```
 git clone https://github.com/aws/efs-utils
 
@@ -74,14 +74,14 @@ systemctl start chronyd
 
 systemctl enable chronyd
 ```
-## configure selinux policies for the webservers and nginx servers
+## configure some linux policies for the webservers and nginx servers
 ```
 setsebool -P httpd_can_network_connect=1
 setsebool -P httpd_can_network_connect_db=1
 setsebool -P httpd_execmem=1
 setsebool -P httpd_use_nfs 1
 ```
-## this section will instll amazon efs utils for mounting the target on the Elastic file system
+## this section will install amazon efs utils for mounting the target on the Elastic file system
 ```
 git clone https://github.com/aws/efs-utils
 

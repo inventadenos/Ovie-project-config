@@ -1,6 +1,6 @@
 #!/bin/bash
 mkdir /var/www/
-sudo mount -t efs -o tls,accesspoint=fsap-06f442dc85764cf77 fs-0ebda5eadd20ec05e:/ /var/www/
+sudo mount -t efs -o tls,accesspoint=fsap-00d73b923c1b9155f fs-09468d479e0f92ec5:/ /var/www/
 yum install -y httpd 
 systemctl start httpd
 systemctl enable httpd
@@ -17,7 +17,7 @@ mkdir /var/www/html/
 cp -R /wordpress/* /var/www/html/
 cd /var/www/html/
 touch healthstatus
-sed -i "s/localhost/ovie-db.cbrifw6zt3w6.us-east-1.rds.amazonaws.com/g" wp-config.php 
+sed -i "s/localhost/harris-db.cbrifw6zt3w6.us-east-1.rds.amazonaws.com/g" wp-config.php 
 sed -i "s/username_here/admin/g" wp-config.php 
 sed -i "s/password_here/admin12345/g" wp-config.php 
 sed -i "s/database_name_here/wordpressdb/g" wp-config.php 
